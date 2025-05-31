@@ -1,0 +1,309 @@
+main {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Hero Section - Scoped to Home */
+.home-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url("https://static.vecteezy.com/system/resources/thumbnails/031/696/054/small_2x/sprawling-agricultural-farm-featuring-fields-of-crops-ai-generated-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/farm-landscape.png');
+  opacity: 0.1;
+}
+
+/* Rest of the styles remain unchanged */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #4CAF50;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  background: #45a049;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.features {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/031/696/054/small_2x/sprawling-agricultural-farm-featuring-fields-of-crops-ai-generated-photo.jpg");
+  opacity: 0.05;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #0a0101a7;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #200303e6;
+}
+
+.card-text {
+  color: #090101ed;
+  line-height: 1.7;
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.farm-stats {
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.farm-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/farm-landscape.png');
+  opacity: 0.1;
+}
+
+.farm-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.farm-stats-card {
+  background: rgba(11, 1, 1, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.farm-stats-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.farm-stats-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.farm-stats-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.farm-stats-text {
+  font-size: 1.3rem;
+}
+
+.cta-section {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7)), 
+    url("https://images.unsplash.com/photo-1501785886875-5e3d4d838e9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+}
+
+.cta-btn-wrapper {
+  margin-top: 40px;
+}
+
+.cta-btn {
+  background: #FFC107;
+  color: #333;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Added active state for the button */
+.cta-btn:active {
+  background: #e0a800; /* Slightly darker yellow for active state */
+  transform: scale(0.95); /* Slight scale-down effect to show click feedback */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Reduced shadow when pressed */
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 120px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .farm-stats-number {
+    font-size: 2.5rem;
+  }
+
+  .farm-stats-text {
+    font-size: 1rem;
+  }
+}

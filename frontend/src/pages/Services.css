@@ -1,0 +1,243 @@
+/* Hero Section - Scoped to Services */
+.services-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://png.pngtree.com/thumb_back/fh260/background/20240725/pngtree-the-concept-of-new-farming-or-smart-farming-agricultural-technology-image_15917909.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0;
+  position: relative;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/farm-landscape.png');
+  opacity: 0.05;
+  z-index: 1;
+}
+
+/* Rest of the styles remain unchanged */
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Forces a single column */
+  gap: 40px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensure the card contains the image */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-content {
+  display: flex;
+  align-items: stretch; /* Ensure both sides take full height */
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.service-body {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+}
+
+.service-img-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden; /* Contain the image within the wrapper */
+  border-radius: 8px; /* Match the card's rounded corners */
+  padding: 20px; /* Keep padding consistent */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  aspect-ratio: 4 / 3; /* Set a fixed aspect ratio to control height */
+  display: flex; /* Use flex to center the image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.service-img {
+  width: 90%; /* Keep the image size as previously adjusted */
+  height: 90%; /* Keep the image size as previously adjusted */
+  object-fit: cover;
+  transition: all 0.5s ease;
+  border-radius: 8px; /* Match the wrapper's rounded corners */
+  position: static; /* Keep static positioning for flex centering */
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.05); /* Hover effect still works */
+}
+
+.service-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.service-text {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.service-list {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.features {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/farm-landscape.png');
+  opacity: 0.05;
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.how-it-works-item {
+  text-align: center;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.step-text {
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #4caf50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 120px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Already set to single column, no change needed */
+  }
+
+  .service-content {
+    flex-direction: column; /* Stack description and image vertically on mobile */
+    gap: 20px;
+  }
+
+  .service-img-wrapper {
+    width: 100%; /* Full width on mobile */
+    height: 200px; /* Fixed height for mobile */
+    padding: 20px; /* Keep padding consistent on mobile */
+    aspect-ratio: auto; /* Remove aspect ratio on mobile to use fixed height */
+    display: flex; /* Use flex to center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+
+  .service-img {
+    width: 90%; /* Keep the image size as previously adjusted */
+    height: 90%; /* Keep the image size as previously adjusted */
+  }
+
+  .service-body {
+    padding: 20px; /* Reduced padding for mobile */
+  }
+}

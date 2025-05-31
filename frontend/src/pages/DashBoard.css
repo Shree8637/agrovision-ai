@@ -1,0 +1,257 @@
+/* Body and App Container */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/background/market.jpg') no-repeat center center fixed; */
+  background-size: cover;
+  color: #fff;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  position: relative;
+  z-index: 1;
+}
+
+.app h1 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+/* Spotlight */
+.spotlight {
+  background: linear-gradient(135deg, #f1c40f, #e67e22);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin: 40px 0;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spotlight:hover {
+  transform: translateY(-5px);
+}
+
+.spotlight h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.spotlight p {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+/* Visualizations */
+.visualizations {
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.815);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.visualizations h2 {
+  color: #000000;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.chart-container {
+  padding: 20px;
+  background:linear-gradient(135deg,#0d1964,#877ed2 );
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.chart-wrapper {
+  height: 500px;
+  width: 100%;
+}
+
+.no-data {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.5em;
+}
+
+/* City Selector */
+.city-selector {
+  background: linear-gradient(145deg, #f0f9e8, #c8e6b7);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.city-selector h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #4b7844;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.city-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.city-card {
+  background-color: #e9f5e1;
+  border: 2px solid #b3d9a3;
+  color: #4b7844;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+  text-align: center;
+}
+
+.city-card:hover {
+  background-color: #c8e6b7;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.city-card.selected {
+  background-color: #4b7844;
+  color: #fff;
+  border-color: #3a6035;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+/* Data Table */
+.table-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+
+.table-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2em;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  font-size: 1.2em;
+}
+
+.table-container td {
+  color: #2c3e50;
+}
+
+.table-container tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Price Highlights */
+.price-highlights {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #ff6b6b, #ffa07a);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  width: 45%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.highlight h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.highlight p {
+  color: #fff;
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 1.5s ease-in;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Additional Styles */
+.loading, .error-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+}

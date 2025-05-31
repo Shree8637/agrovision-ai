@@ -1,0 +1,230 @@
+/* General Styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/farm-landscape.png');
+    opacity: 0.05;
+    z-index: 1;
+  }
+  
+  .auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Logo and Title */
+  .text-center.mb-3 {
+    margin-bottom: 1rem;
+  }
+  
+  .logo-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+  }
+  
+  .logo-icon {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .auth-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .auth-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Error Message */
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    border: 1px solid #f5c6cb;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .input-group, .password-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 15px;
+    color: #4CAF50;
+    font-size: 1.1rem;
+    z-index: 3; /* Ensure the icon stays above the text */
+  }
+  
+  .form-control {
+    padding: 15px 40px 15px 45px; /* Adjusted padding to accommodate the icon and eye button */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    position: relative; /* Ensure proper stacking context for text */
+  }
+  
+  /* Ensure placeholder and input text appear after the icon */
+  .form-control::placeholder {
+    color: #888;
+    position: absolute;
+    left: 45px; /* Position after the icon (45px accounts for icon + padding) */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Place placeholder behind the icon */
+    padding: 0;
+    font-size: 1rem;
+  }
+  
+  .form-control:focus::placeholder {
+    color: #aaa;
+  }
+  
+  /* Ensure typed text appears after the icon */
+  .form-control:not(:placeholder-shown) {
+    padding-left: 45px; /* Maintain padding to keep text after the icon */
+    text-indent: 0; /* Remove default text indentation if any */
+  }
+  
+  /* Style the input value (typed text) to appear after the icon */
+  .form-control:not(:placeholder-shown)::after {
+    content: '';
+    position: absolute;
+    left: 45px; /* Align with the icon’s position */
+    width: calc(100% - 45px); /* Adjust width to fit after the icon */
+    height: 100%;
+    z-index: 2; /* Ensure text is above placeholder but below icon */
+  }
+  
+  /* Password Toggle Button */
+  .password-toggle-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #4CAF50;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 4; /* Ensure the toggle button stays above everything else */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .password-toggle-btn:hover {
+    opacity: 1;
+  }
+  
+  .password-toggle-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Ensure the toggle button doesn’t interfere with input focus */
+  .form-control:focus + .password-toggle-btn {
+    color: #2E7D32;
+  }
+  
+  .auth-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+  }
+  
+  .auth-btn:disabled {
+    opacity: 0.7;
+  }
+  
+  /* Link Styles */
+  .auth-link {
+    color: #4CAF50;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    color: #2E7D32;
+    text-decoration: underline;
+  }
+  
+  /* Text Alignment and Spacing */
+  .text-center.mt-3 {
+    margin-top: 30px;
+    text-align: center;
+  }
